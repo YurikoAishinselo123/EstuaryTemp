@@ -8,5 +8,18 @@ public class InteractionManager : MonoBehaviour
         {
             InteractionEvents.RaiseInteract();
         }
+
+        if (InputManager.Instance.Action)
+        {
+            InteractionEvents.RaiseUseTool();
+        }
+
+        // for (int i = 0; i < 9; i++)
+        // {
+        //     if (InputManager.Instance.IsInventorySlotPressed(i))
+        //     {
+        //         InteractionEvents.RaiseInventorySlotSelected(i);
+        //     }
+        // }
     }
 }
